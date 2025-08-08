@@ -24,6 +24,9 @@
 ```
 wget https://raw.githubusercontent.com/Riswan481/vpnstore/main/files/update.sh && chmod +x update.sh && ./update.sh
 ```
+```bash
+apt install haproxy -y
+```
 # UP REPO DEBIAN
 <pre><code>apt update -y && apt upgrade -y && apt dist-upgrade -y && reboot</code></pre>
 ### INSTALL SCRIPT 
