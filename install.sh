@@ -10,9 +10,10 @@ cd
 rm -rf /root/udp
 mkdir -p /root/udp
 
-# Set timezone GMT+5:30 (Sri Lanka)
-echo "Changing timezone to GMT+5:30 (Sri Lanka)"
-ln -fs /usr/share/zoneinfo/Asia/Colombo /etc/localtime
+# Set timezone Asia/Jakarta (GMT+7)
+echo "Changing timezone to Asia/Jakarta"
+ln -fs /usr/share/zoneinfo/Asia/Jakarta /etc/localtime
+dpkg-reconfigure -f noninteractive tzdata
 
 # Install udp-custom
 echo "Downloading udp-custom..."
