@@ -36,7 +36,6 @@ curl -L "$ZIP_URL" -o "/tmp/$BOT_NAME.zip"
 # Extract ZIP ke folder bot
 echo -e "${CYAN}📂 Extract bot ke folder $BOT_DIR...${RESET}"
 unzip -o "/tmp/$BOT_NAME.zip" -d /opt
-# ZIP biasanya bikin folder vpnstore-main
 mv /opt/vpnstore-main/* "$BOT_DIR"
 
 # ===== INPUT BOT TOKEN & OWNER ID =====
@@ -46,21 +45,16 @@ read -p "Masukkan OWNER CHAT ID: " OWNER_ID
 # ===== UPDATE index.js =====
 if [ -f "$INDEX_FILE" ]; then
     echo -e "${CYAN}✏️ Update index.js dengan BOT_TOKEN & OWNER_ID...${RESET}"
-
-    # Ganti atau tambahkan baris BOT_TOKEN
     if grep -q "const BOT_TOKEN" "$INDEX_FILE"; then
         sed -i "s|const BOT_TOKEN = .*;|const BOT_TOKEN = '$BOT_TOKEN';|" "$INDEX_FILE"
     else
         sed -i "1i const BOT_TOKEN = '$BOT_TOKEN';" "$INDEX_FILE"
     fi
-
-    # Ganti atau tambahkan baris OWNER_ID
     if grep -q "const OWNER_ID" "$INDEX_FILE"; then
         sed -i "s|const OWNER_ID = .*;|const OWNER_ID = $OWNER_ID;|" "$INDEX_FILE"
     else
         sed -i "2i const OWNER_ID = $OWNER_ID;" "$INDEX_FILE"
     fi
-
     echo -e "${GREEN}✅ index.js berhasil diperbarui!${RESET}"
 else
     echo -e "${RED}❌ index.js tidak ditemukan di $BOT_DIR${RESET}"
