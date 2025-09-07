@@ -26,22 +26,11 @@
 apt-get update && apt-get upgrade -y && update-grub && sleep 2 && reboot 
   ```
   or
-
-```html
-apt update -y && apt upgrade -y && apt dist-upgrade -y && reboot
-
-```
   
   <img src="https://img.shields.io/badge/Update%20_&_%20Upgrade Ubuntu 18 & 20 LTS-purple">
 
   ```html
   apt-get update && apt-get upgrade -y && apt dist-upgrade -y && update-grub && sleep 2 && reboot
-
-  ```
-
-   or
-   ```html
-  apt-get update && apt-get upgrade -y && apt dist-upgrade -y && update-grub && reboot
 
   ```
   
