@@ -20,6 +20,35 @@
 <p <p align="center"><img src="https://wangchujiang.com/sb/status/stable.svg">
 
 
+<img src="https://img.shields.io/badge/Update%20_&_%20Upgrade Debian 9,10,11-purple">
+
+ ```html
+apt-get update && apt-get upgrade -y && update-grub && sleep 2 && reboot 
+  ```
+  or
+
+```html
+apt update -y && apt upgrade -y && apt dist-upgrade -y && reboot
+
+```
+  
+  <img src="https://img.shields.io/badge/Update%20_&_%20Upgrade Ubuntu 18 & 20 LTS-purple">
+
+  ```html
+  apt-get update && apt-get upgrade -y && apt dist-upgrade -y && update-grub && sleep 2 && reboot
+
+  ```
+
+   or
+   ```html
+  apt-get update && apt-get upgrade -y && apt dist-upgrade -y && update-grub && reboot
+
+  ```
+  
+### 2.
+
+  <img src="https://img.shields.io/badge/Install_All_Service_VPN%20-purple">
+
 ### Update akan datang
 ```
 wget https://raw.githubusercontent.com/Riswan481/vpnstore/main/files/update.sh && chmod +x update.sh && ./update.sh
